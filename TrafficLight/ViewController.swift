@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     @IBAction func tapButton(_ sender: Any) {
         switchButton.setTitle("NEXT", for: .normal)
         
-       
+        }
+        
     }
     
-}
 
