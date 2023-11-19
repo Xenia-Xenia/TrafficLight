@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    
     @IBOutlet var lights: [UIView]!
+    
     @IBOutlet var switchButton: UIButton!
     
     override func viewDidLoad() {

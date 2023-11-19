@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,22 +14,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ath-Nm-JmM">
-                                <rect key="frame" x="130" y="79" width="170" height="594.66666666666663"/>
+                                <rect key="frame" x="110" y="40" width="100.5" height="386"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOh-Hb-OTx">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOh-Hb-OTx" userLabel="redLight">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100.5"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dl-1E-lxz">
-                                        <rect key="frame" x="0.0" y="212.33333333333331" width="170" height="170"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dl-1E-lxz" userLabel="yellowLight">
+                                        <rect key="frame" x="0.0" y="143" width="100.5" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILg-Sm-5fP">
-                                        <rect key="frame" x="0.0" y="424.66666666666669" width="170" height="170.00000000000006"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILg-Sm-5fP" userLabel="greenLight">
+                                        <rect key="frame" x="0.0" y="285.5" width="100.5" height="100.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
@@ -42,7 +42,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYu-gU-atX">
-                                <rect key="frame" x="157.66666666666666" y="848" width="114.99999999999997" height="50"/>
+                                <rect key="frame" x="102.5" y="518" width="115" height="50"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="EuY-cE-NXF"/>
@@ -71,6 +71,8 @@
                     <connections>
                         <outlet property="switchButton" destination="sYu-gU-atX" id="0f1-8s-yAu"/>
                         <outletCollection property="lights" destination="zOh-Hb-OTx" collectionClass="NSMutableArray" id="KTx-1B-3Eo"/>
+                        <outletCollection property="lights" destination="ILg-Sm-5fP" collectionClass="NSMutableArray" id="iaH-0d-bZ0"/>
+                        <outletCollection property="lights" destination="2dl-1E-lxz" collectionClass="NSMutableArray" id="D4L-Hy-yyx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
